@@ -18,6 +18,11 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	@Override
+	public int getReferenceSpeed() {
+		return controller.getReferenceSpeed();
+	}
+
+	@Override
 	public int getJoystickPosition() {
 		return joystickPosition;
 	}
@@ -27,5 +32,7 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 	}
+
+	
 
 }
