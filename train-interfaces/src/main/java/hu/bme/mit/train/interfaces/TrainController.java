@@ -9,5 +9,8 @@ public interface TrainController {
 	void setSpeedLimit(int speedLimit);
 
 	void setJoystickPosition(int joystickPosition);
+	
+	public int getJoyPosTime(int time);
+	public int getSpeedTime(int time);
 
 }
