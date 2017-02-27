@@ -8,7 +8,11 @@ import hu.bme.mit.train.interfaces.TrainController;
 public class TrainControllerImpl implements TrainController {
 
 	
-	private Table<Integer, String, Integer> tachometer = HashBasedTable.create();
+	private Table<Integer, String, Integer> tachometer;
+	
+	public TrainControllerImpl(){
+		tachometer = HashBasedTable.create();
+	}
 	
 	private int step = 0;
 	private int referenceSpeed = 0;
