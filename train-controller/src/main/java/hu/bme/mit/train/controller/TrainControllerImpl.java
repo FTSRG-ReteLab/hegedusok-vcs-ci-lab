@@ -29,8 +29,9 @@ public class TrainControllerImpl implements TrainController {
 
 		enforceSpeedLimit();
 		
-		tachometer.put(time++, "step", step);
-		tachometer.put(time++, "referenceSpeed", referenceSpeed);
+		tachometer.put(time, "step", step);
+		tachometer.put(time, "referenceSpeed", referenceSpeed);
+		time++;
 	}
 
 	@Override
@@ -54,7 +55,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;	
-		tachometer.put(time++, "step", step);
+		tachometer.put(time, "step", step);
 	}
 	@Override
 	public int getJoyPosTime(int time){

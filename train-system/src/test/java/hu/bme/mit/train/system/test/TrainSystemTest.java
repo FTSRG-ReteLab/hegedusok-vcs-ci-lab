@@ -63,14 +63,12 @@ public class TrainSystemTest {
 	
 	@Test
 	public void test4() {
-		Assert.assertEquals(0, controller.getSpeedTime(0));
-		Assert.assertEquals(0, controller.getJoyPosTime(0));
 		user.overrideJoystickPosition(4);
 		Assert.assertEquals(4, controller.getJoyPosTime(0));
 		controller.followSpeed();
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
-		Assert.assertEquals(-1, controller.getSpeedTime(2));
+		Assert.assertEquals(-1, controller.getSpeedTime(1));
 	}
 
 }
